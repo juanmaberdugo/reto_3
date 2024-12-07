@@ -22,7 +22,6 @@ class Point:
         distance = ((self.x - point.x) ** 2 + (self.y - point.y) ** 2) ** 0.5
         return distance
 
-
 class Line:
     def __init__(self, start: Point, end: Point):
         self.start = start
@@ -42,7 +41,6 @@ class Line:
 
     def compute_vertical_cross(self):
         return self.start.x * self.end.x <= 0
-
 
 class Rectangle:
     def __init__(self, **kwargs):
@@ -75,7 +73,6 @@ class Rectangle:
 
     def compute_area(self):
         return self.width * self.height
-
 
 class Square(Rectangle):
     def __init__(self, side_length: float, **kwargs):
