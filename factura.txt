@@ -1,0 +1,10 @@
+reto3\Factura
+==========
+Gaseosa: COP 2500.0, Tamaño: 500ml, Carbonatada: Sí x2: COP 5000.0
+Papas Fritas: COP 4000.0, Porción: Mediana, Con salsas: Sí x1: COP 4000.0
+Pasta Carbonara: COP 12000.0, Origen: Italia, Tiempo de preparación: 15 min x1: COP 12000.0
+Tacos al Pastor: COP 10000.0, Origen: México, Tiempo de preparación: 10 min x2: COP 20000.0
+==========
+Total: COP 41000.0
+==========
+Gracias por su compra!
