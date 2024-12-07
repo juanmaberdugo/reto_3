@@ -1,0 +1,31 @@
+classDiagram
+    class Order {
+        + items: List
+        + add_item(menu_item: MenuItem, quantity: int = 1)
+        + calculate_total(): float
+        + generate_invoice(filename: str)
+        + get_order_details(): str
+    }
+    class MenuItem {
+        + name: str
+        + price: float
+        + calculate_price(quantity: int): float
+        + get_details(): str
+    }
+    class Beverage {
+        + size: int
+        + is_carbonated: bool
+    }
+    class Appetizer {
+        + portion_size: str
+        + has_sauces: bool
+    }
+    class MainCourse {
+        + origin: str
+        + cooking_time: int
+    }
+
+    MenuItem <-- Beverage
+    MenuItem <-- Appetizer
+    MenuItem <-- MainCourse
+    Order --> MenuItem 
