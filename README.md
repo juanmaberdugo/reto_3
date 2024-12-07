@@ -201,7 +201,7 @@ class Order:
     def calculate_total(self):
         return sum(item.calculate_price(quantity) for item, quantity in self.items)
 
-    def generate_invoice(self, filename):
+    def generate_bill(self, filename):
         file = open(filename, "w")
         file.write("Factura\n")
         file.write("==========\n")
@@ -249,6 +249,7 @@ order.add_item(menu_items[7], 2)
 
 print(order.get_order_details())
 
-order.generate_invoice("factura.txt")
+order.generate_bill("factura.txt")
 print("Factura generada en el archivo 'factura.txt'.")
+
 ```
