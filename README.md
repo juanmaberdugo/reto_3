@@ -1,7 +1,7 @@
 # reto_3
 ## Ejercicio de clase
 Se añadio la clase Line al codigo que se habia estado trabajando en las anteriores clases
-'''python
+```python
 import math
 
 class Point:
