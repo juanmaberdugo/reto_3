@@ -93,6 +93,7 @@ bottom_left = Point(2, 3)
 upper_right = Point(10, 8)
 rect3 = Rectangle(bottom_left=bottom_left, upper_right=upper_right)
 print(rect3.compute_area())
+```
 
 ## Restaurant
 Restaurant scenario: You want to design a program to calculate the bill for a customer's order in a restaurant.
@@ -133,4 +134,4 @@ classDiagram
     MenuItem <-- Appetizer
     MenuItem <-- MainCourse
     Order --> MenuItem 
-
+```
