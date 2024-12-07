@@ -1,6 +1,7 @@
 # reto_3
 ## Ejercicio de clase
-Se añadio la clase Line al codigo que se habia estado trabajando en las anteriores clases
+Se añadio la clase Line al codigo que se habia estado trabajando en las anteriores clases.
+
 ```python
 import math
 
@@ -92,4 +93,44 @@ bottom_left = Point(2, 3)
 upper_right = Point(10, 8)
 rect3 = Rectangle(bottom_left=bottom_left, upper_right=upper_right)
 print(rect3.compute_area())
+
+## Restaurant
+Restaurant scenario: You want to design a program to calculate the bill for a customer's order in a restaurant.
+Define a base class MenuItem: This class should have attributes like name, price, and a method to calculate the total price.
+Create subclasses for different types of menu items: Inherit from MenuItem and define properties specific to each type (e.g., Beverage, Appetizer, MainCourse).
+Define an Order class: This class should have a list of MenuItem objects and methods to add items, calculate the total bill amount, and potentially apply specific discounts based on the order composition.
+### Solucion
+Para hacer el siguiente ejercicio se diseño el siguiente diagrama de clases.
+```mermaid
+classDiagram
+    class Order {
+        + items: List
+        + add_item(menu_item: MenuItem, quantity: int = 1)
+        + calculate_total(): float
+        + generate_invoice(filename: str)
+        + get_order_details(): str
+    }
+    class MenuItem {
+        + name: str
+        + price: float
+        + calculate_price(quantity: int): float
+        + get_details(): str
+    }
+    class Beverage {
+        + size: int
+        + is_carbonated: bool
+    }
+    class Appetizer {
+        + portion_size: str
+        + has_sauces: bool
+    }
+    class MainCourse {
+        + origin: str
+        + cooking_time: int
+    }
+
+    MenuItem <-- Beverage
+    MenuItem <-- Appetizer
+    MenuItem <-- MainCourse
+    Order --> MenuItem 
 
